@@ -1,0 +1,18 @@
+
+$status1 = new App\Status
+$status1->name = 'Pending'
+$status1->save()
+
+$status2 = new App\Status;
+$status2->name = 'Approved';
+$status2->save();
+
+$status3 = new App\Status;
+$status3->name = 'Declined';
+$status3->save();
+
+$status4 = new App\Status;
+$status4->name = 'Cancelled';
+$status4->save();
+
+

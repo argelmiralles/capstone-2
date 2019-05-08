@@ -70,9 +70,10 @@
                     <label for="quantity">Add copies</label>
                     <div class="alert alert-warning" role="alert">
                         <h6>IMPORTANT NOTE</h6>
-                        <p>The value entered here will be added to the <strong>current number of
-                                copies</strong> which is <strong>{{$game->quantityTotal}}</strong>.
-                            If there are no changes in the number of copies, leave this at 0.
+                        <p>The value entered here will be the <strong>new number of
+                                copies</strong>.
+                            If there are no changes in the number of copies, leave this. If there are changes, add the
+                            copies to the current number of copies and add it here.
                         </p>
                     </div>
                     <span></span>

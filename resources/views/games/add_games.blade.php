@@ -21,8 +21,12 @@
                 @csrf
 
                 <div class="form-group">
-                    <label for="name">Name</label>
+                    <label for="name">Game Name (Ex. Uncharted 4, Horizon, The Last Of Us)</label>
                     <input type="text" name="name" class="form-control" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="subtitle">Subtitle (Ex. A Thief's End, Zero Dawn, Remastered)</label>
+                    <input type="text" name="subtitle" class="form-control" id="subtitle">
                 </div>
                 <div class="form-group">
                     <label for="description">Description</label>
@@ -49,6 +53,13 @@
                 </div>
                 <div class="form-group">
                     <label for="trailer_link">Youtube ID: </label>
+                    <div class="alert alert-warning" role="alert">
+                        <h6>IMPORTANT NOTE</h6>
+                        <p>(Copy everything after the <strong>"=" or equal sign</strong> in the Youtube
+                            link. Example:<strong>"AaOWRvmtEFQ"</strong> from
+                            https://www.youtube.com/watch?v=AaOWRvmtEFQ)
+                        </p>
+                    </div>
                     <input type="text" name="trailer_link" class="form-control" id="trailer_link">
                 </div>
         </div>

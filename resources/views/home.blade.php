@@ -1,4 +1,4 @@
-@extends('layouts.template')
+@extends('layouts.template-height-auto-all-sizes')
 
 @section('content')
 @if(Auth::user()->role_id == 2)
@@ -20,22 +20,22 @@
     <div class="container on-page-nav">
         <div class="row">
             <div class="col-12 col-lg-3">
-                <a href="#" class="btn btn-block my-1" id="games">
+                <a href="/game-list" class="btn btn-block my-1 pt-2" id="games">
                     <h5>Available Games</h5>
                 </a>
             </div>
             <div class="col-12 col-lg-3">
-                <a href="#" class="btn btn-block my-1" id="basket">
+                <a href="/basket" class="btn btn-block my-1 pt-2" id="basket">
                     <h5>Basket</h5>
                 </a>
             </div>
             <div class="col-12 col-lg-3">
-                <a href="#" class="btn btn-block my-1" id="transactions">
+                <a href="/rent_requests" class="btn btn-block my-1 pt-2" id="transactions">
                     <h5>Transactions</h5>
                 </a>
             </div>
             <div class="col-12 col-lg-3">
-                <a href="#" class="btn btn-block my-1" id="edit-profile">
+                <a href="/edit-profile" class="btn btn-block my-1 pt-2" id="edit-profile">
                     <h5>Edit Profile</h5>
                 </a>
             </div>
@@ -44,7 +44,32 @@
 </div>
 @else
 {{-- ADMIN SECTION --}}
-
+<div class="container mt-5">
+    <div class="container on-page-nav">
+        <div class="row">
+            <div class="col-12 col-lg-3">
+                <a href="/game-list" class="btn btn-block my-1 pt-2" id="games">
+                    <h5>Edit / Delete Games</h5>
+                </a>
+            </div>
+            <div class="col-12 col-lg-3">
+                <a href="/all_requests" class="btn btn-block my-1 pt-2" id="basket">
+                    <h5>User Requests</h5>
+                </a>
+            </div>
+            <div class="col-12 col-lg-3">
+                <a href="/rent_requests" class="btn btn-block my-1 pt-2" id="transactions">
+                    <h5>Add Games</h5>
+                </a>
+            </div>
+            <div class="col-12 col-lg-3">
+                <a href="/edit-profile" class="btn btn-block my-1 pt-2" id="edit-profile">
+                    <h5>Edit Profile</h5>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 @endif

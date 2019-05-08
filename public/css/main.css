@@ -21,6 +21,15 @@
     background-attachment: fixed;
     background-position: center;
 }
+#main-height-auto-all-sizes {
+    background-image: url("/images/wallpaper.jpg");
+    min-height: 100vh;
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
 
 .landing-page {
     height: 100vh;
@@ -169,8 +178,14 @@
 
 #view-details {
     color: #333333;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 1);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.38);
+}
+
+#basket-form {
+    background-color: #f2f2f2;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.38);
+    color: #333333;
 }
 
 @media only screen and (max-width: 991px) {
