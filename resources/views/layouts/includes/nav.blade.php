@@ -12,17 +12,20 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="/Home">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/game-list">Games</a>
         </li>
+        @if(Auth::user() != null && Auth::user()->role_id == 2 )
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="/rent_requests">Rent Requests</a>
         </li>
+        @else
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a href="/all_requests" class="nav-link">Requests</a>
         </li>
+        @endif
       </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">

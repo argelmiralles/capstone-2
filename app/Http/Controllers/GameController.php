@@ -225,8 +225,8 @@ class GameController extends Controller
          $request->total = $total;
          $request->save();
          Session::forget("basket");
-         return redirect("/home");
-      }
+         return redirect("/rent_requests");
+    }
 
       public function edit(){
          return view('games.edit-profiles');

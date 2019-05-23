@@ -50,7 +50,27 @@ class RequestController extends Controller
         $rent_request = RentRequest::find($id);
         $rent_request->status_id = 3;
         $rent_request->save();
-        
+        return redirect("/all_requests");
+    }
+
+    public function cancelRequest($id){
+        $rent_request = RentRequest::find($id);
+        $rent_request->status_id = 4;
+        $rent_request->save();
+        return redirect("/rent_requests");
+    }
+
+    public function returned(Request $request, $id){
+         $rent_request = RentRequest::find($id);
+        $rent_request->status_id = 6;
+        $rent_request->on_rent = false;
+        $rent_request->save();
+
+         $game = Game::find($request->game);
+         $game->quantityInStock ++;
+        $game->quantityOnRent--;
+        $game->save();
+        return redirect("/all_requests");
     }
 
     public function checkOverdue(){

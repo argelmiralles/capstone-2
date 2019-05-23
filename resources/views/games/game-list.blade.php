@@ -34,14 +34,18 @@
                     <img class="card-img-bottom" src="/{{$game->img_path}}" alt="Card image cap">
                 </div>
                 @if(Auth::user() != null && Auth::user()->role_id == 2 )
+                <h5>Copies remaining : {{$game->quantityInStock}}</h5>
                 <div class="btn-group">
                     <button class="btn btn-primary mx-1 my-1" data-toggle="modal"
                         data-target="#viewDetails{{$game->id}}">View
                         Details</button>
-
+                @if($game->quantityInStock==0)
+                    <a href="#" class="btn btn-danger my-1 mr-1">Out of Stock</a>
+                @else
                     <button class="btn btn-primary mr-1 my-1" data-toggle="modal"
                         data-target="#rent{{$game->id}}">Rent</button>
                 </div>
+                @endif
                 @else
                 <div class="btn-group">
                     <button class="btn btn-primary mx-1 my-1" data-toggle="modal"
@@ -148,7 +152,6 @@
                             <p>{{$game->description}}</p>
                             @if($game->quantityInStock > 0)
                             <p>Game is Available for Rent</p>
-                            <a href="#" class="btn btn-success mr-1 my-1">Rent</a>
                             @else
                             <p>Sorry, the game is not vailable for Rent</p>
                             @endif

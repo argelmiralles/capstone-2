@@ -30,6 +30,7 @@ Route::delete('/delete-game/{id}', 'GameController@deleteGame');
 Route::get('/all_requests', 'RequestController@showAllRequests');
 Route::post('/approval/{id}', 'RequestController@approval');
 Route::post('/disapproval/{id}', 'RequestController@disapproval');
+Route::post('/returned/{id}', 'RequestController@returned');
 });
 
 Route::middleware("user")->group(function(){
@@ -42,6 +43,7 @@ Route::patch('/basket/{id}/editWeek', 'Gamecontroller@editWeek');
 Route::get('/sendRequest', "GameController@sendRequest");
 Route::get("/rent_requests", "RequestController@showRequests");
 Route::get("/edit-profile", "GameController@edit");
+Route::post("/cancel/{id}", "RequestController@cancelRequest");
 
 });
 
